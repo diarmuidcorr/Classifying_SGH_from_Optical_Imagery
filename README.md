@@ -78,9 +78,9 @@ https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud/blob/master/R
 
 Optical satellite sensors typically contain multispectral data with bands in the visible, near infrared, and short wave infrared part of the electromagnetic spectrum. An RGB image, sometimes referred to as a truecolor image, is a useful way to display the information stored in each pixel in a way that humans can understand. The colour of each pixel is determined by the combination of the red, green, and blue intensities stored in each colour plane at the pixel's location. The precision with which a real-life image can be replicated has led to the commonly used term truecolor image. 
 
-A sample script to combine RGB images for a Sentinel-2 or Landsat-8 is given in the script named:
+  A sample script to combine RGB images for a Sentinel-2 or Landsat-8 is given in the script named:
   
-  RGB_S2_L8.py 
+    RGB_S2_L8.py 
   
   Note: The following packages are required on a python environment before this script can be executed: rasterio, glob, os, matplotlib, numpy, math, shutil, multiprocessing.
 
