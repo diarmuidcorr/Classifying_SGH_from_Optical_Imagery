@@ -15,7 +15,7 @@ Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster
 
   There are many options available to visualise satellite imagery depending on what you want to see, which sensor you wish to sample, and whether you want to download the data. This list is not exhaustive.
   
-  NASA/USGS EarthExplorer:
+  ### NASA/USGS EarthExplorer:
     
     To quickly visualise Sentinel-2 and Landsat imagery for a location and date range use the NASA/USGS tool, EarthExplorer:
       
@@ -29,7 +29,7 @@ https://apps.sentinel-hub.com/sentinel-playground/
     Note: EOS landviewer limited to 10 free scenes a day
 
 
-  ESA Copernicus Open Access Hub:
+  ### ESA Copernicus Open Access Hub:
     To visualise and download Sentinel mission data, use ESA’s Copernicus Open Access Hub:
     
 https://scihub.copernicus.eu/dhus/#/home 
@@ -38,7 +38,7 @@ https://scihub.copernicus.eu/dhus/#/home
     
     Note: A free account is needed for this data. 
 
-  Google Earth Engine:
+  ### Google Earth Engine:
 
     To visualise and adapt satellite data online, use Google Earth Engine:
 
@@ -48,7 +48,7 @@ https://earthengine.google.com/
     
     Note: A free account is needed for this data.
 
-  Google Cloud Storage buckets:
+  ### Google Cloud Storage buckets:
     To download data without visualisation, use public Google Cloud Storage buckets:
 
 https://console.cloud.google.com/storage/browser/gcp-public-data-landsat - Landsat level 1 collection only.
