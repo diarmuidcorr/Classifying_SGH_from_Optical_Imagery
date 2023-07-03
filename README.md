@@ -45,34 +45,33 @@ https://scihub.copernicus.eu/dhus/#/home
 https://earthengine.google.com/
     
     Google Earth Engine combines a multi-petabyte catalogue of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. Scientists, researchers, and developers use Earth Engine to detect changes, map trends, and quantify differences on the Earth's surface. Earth Engine is now available for commercial use, and remains free for academic and research use.
-
-  Note: A free account is needed for this data.
+    
+    Note: A free account is needed for this data.
 
   Google Cloud Storage buckets:
     To download data without visualisation, use public Google Cloud Storage buckets:
 
-      https://console.cloud.google.com/storage/browser/gcp-public-data-landsat - Landsat level 1 collection only.
-      https://cloud.google.com/storage/docs/public-datasets/landsat - documentation.
+https://console.cloud.google.com/storage/browser/gcp-public-data-landsat - Landsat level 1 collection only.
+https://cloud.google.com/storage/docs/public-datasets/landsat - documentation.
 
-      https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/tiles/ - the Sentinel-2 level 1 and 2 collections only.
-      https://cloud.google.com/storage/docs/public-datasets/sentinel-2 - documentation.
-       
-    The data may be downloaded directly from these storage buckets, although this may prove inefficient. To batch download data, make use of the satellite imagery download script to fetch Landsat & Sentinel data, developed by Vasco Nunes:
-    
-      https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
+https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/tiles/ - the Sentinel-2 level 1 and 2 collections only.
+https://cloud.google.com/storage/docs/public-datasets/sentinel-2 - documentation.
       
-    A sample script using this package is available in the script named:
-    
-      satellite_imagery_download.py 
-      
-    Note: The FeLS package from above should be installed on a python environment before this script can be executed:
-    
-      pip install fels   (difficult to install with conda)
-      
-    Note: All files will be downloaded to the chosen output directory. A tile catalogue is downloaded, this can exceed 5-10 GB. 
-    Note: For information on variables and arguments see the documentation here:
+  The data may be downloaded directly from these storage buckets, although this may prove inefficient. To batch download data, make use of the satellite imagery download script to fetch Landsat & Sentinel data, developed by Vasco Nunes:
+  
+https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
 
-      https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud/blob/master/README.md
+  A sample script using this package is available in the script named:
+    satellite_imagery_download.py 
+    
+  Note: The FeLS package from above should be installed on a python environment before this script can be executed:
+  
+    pip install fels   (difficult to install with conda)
+      
+  Note: All files will be downloaded to the chosen output directory. A tile catalogue is downloaded, this can exceed 5-10 GB. 
+  Note: For information on variables and arguments see the documentation here:
+
+https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud/blob/master/README.md
 
     
 
