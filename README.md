@@ -16,11 +16,12 @@ Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster
   There are many options available to visualise satellite imagery depending on what you want to see, which sensor you wish to sample, and whether you want to download the data. This list is not exhaustive.
   
   NASA/USGS EarthExplorer:
+    
     To quickly visualise Sentinel-2 and Landsat imagery for a location and date range use the NASA/USGS tool, EarthExplorer:
       
-      https://earthexplorer.usgs.gov/
-      https://eos.com/products/landviewer/
-      https://apps.sentinel-hub.com/sentinel-playground/
+https://earthexplorer.usgs.gov/
+https://eos.com/products/landviewer/
+https://apps.sentinel-hub.com/sentinel-playground/
   
     EarthExplorer contains sensor data from many other sources, and is more useful for visualisation rather than downloading due to slow download speeds and difficulty in batch downloading. 
     Note: A free account is needed for this data. 
@@ -31,7 +32,7 @@ Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster
   ESA Copernicus Open Access Hub:
     To visualise and download Sentinel mission data, use ESA’s Copernicus Open Access Hub:
     
-      https://scihub.copernicus.eu/dhus/#/home 
+https://scihub.copernicus.eu/dhus/#/home 
     
     This is the source for Sentinel-1,2,3 data. However, ESA removes the data when over one year old. This is frustrating if you wish to visualise/download older data.
     
@@ -41,8 +42,8 @@ Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster
 
     To visualise and adapt satellite data online, use Google Earth Engine:
 
-      https://earthengine.google.com/
-
+https://earthengine.google.com/
+    
     Google Earth Engine combines a multi-petabyte catalogue of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. Scientists, researchers, and developers use Earth Engine to detect changes, map trends, and quantify differences on the Earth's surface. Earth Engine is now available for commercial use, and remains free for academic and research use.
 
   Note: A free account is needed for this data.
