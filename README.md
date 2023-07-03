@@ -1,7 +1,7 @@
 # Classifying_SGH_from_Optical_Imagery
 Guide to Optical Imagery and Machine Learning Classification of Surface Water on Ice
 
-This document contains information on how to create and set-up a Python (Conda) environment for working with satellite imagery, how to find and download Sentinel-2 and Landsat missions imagery, and how to train, test and execute scripts for the classification of ponded water on the surface of ice and/or snow.
+This document contains information on how to find, visualise, download and manipulate optical satellite imagery for the Sentinel-2 and Landsat mission sensors, and how to train, test and execute scripts for the classification of ponded water on the surface of ice and/or snow.
 
 This document was compiled by Diarmuid Corr, Lancaster University (d.corr@lancaster.ac.uk, https://github.com/diarmuidcorr) and details the work developed for his PhD project.
 
