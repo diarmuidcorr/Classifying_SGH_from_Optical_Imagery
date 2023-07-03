@@ -11,7 +11,7 @@ The Random Forest scripts are based on a classification script developed by Chri
 
 Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster.ac.uk).
 
-1 - Sources to visualise and download satellite imagery:
+## 1 - Sources to visualise and download satellite imagery:
 
   There are many options available to visualise satellite imagery depending on what you want to see, which sensor you wish to sample, and whether you want to download the data. This list is not exhaustive.
   
@@ -73,7 +73,7 @@ https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
 
 https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud/blob/master/README.md
 
-2 - Create RGB/True Colour imagery from satellite imagery:
+## 2 - Create RGB/True Colour imagery from satellite imagery:
 
 Optical satellite sensors typically contain multispectral data with bands in the visible, near infrared, and short wave infrared part of the electromagnetic spectrum. An RGB image, sometimes referred to as a truecolor image, is a useful way to display the information stored in each pixel in a way that humans can understand. The colour of each pixel is determined by the combination of the red, green, and blue intensities stored in each colour plane at the pixel's location. The precision with which a real-life image can be replicated has led to the commonly used term truecolor image. 
 
