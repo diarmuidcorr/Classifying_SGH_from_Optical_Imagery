@@ -1,6 +1,6 @@
 #script used to create RGB/Truecolour imagery from downloaded optical
 #satellite imagery for a chosen sensor.
-#Compiled by Diarmuid Corr, d.corr@lancaster.ac.uk
+#Compiled by Diarmuid Corr, d.corr@lancaster.ac.uk 
 
 import rasterio, glob, os
 from matplotlib import pyplot as plt
