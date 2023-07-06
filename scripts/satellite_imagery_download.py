@@ -1,7 +1,7 @@
-#script used to download all optical satellite imagery from a chosen sensor.
-#The satellite imagery download script, FELS, is from Vasco Nunes:
-#SOURCE: https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
-#Compiled by Diarmuid Corr, d.corr@lancaster.ac.uk
+# script used to download all optical satellite imagery from a chosen sensor.
+# The satellite imagery download script, FELS, is from Vasco Nunes:
+# SOURCE: https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
+# Compiled by Diarmuid Corr, d.corr@lancaster.ac.uk
 
 from fels import run_fels
 from multiprocessing import Pool
