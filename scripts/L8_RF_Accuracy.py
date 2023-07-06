@@ -3,7 +3,7 @@
 # based on and developed from a classification script developed by Chris Holden
 # http://ceholden.github.io/open-geo-tutorial/python/chapter_5_classification.html
 # and compiled by Diarmuid Corr, Lancaster University (d.corr@lancaster.ac.uk, 
-# https://github.com/diarmuidcorr) as part of his PhD project.
+# https://github.com/diarmuidcorr) as part of his PhD project. 
 
 #packages
 import numpy as np # math and array handling
