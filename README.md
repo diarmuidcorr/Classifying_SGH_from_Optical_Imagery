@@ -5,9 +5,9 @@ This document contains information on how to find, visualise, download and manip
 
 This document was compiled by Diarmuid Corr, Lancaster University (d.corr@lancaster.ac.uk, https://github.com/diarmuidcorr) and details the work developed for his PhD project.
 
-The satellite imagery download script to fetch Landsat & Sentinel data was developed by Vasco Nunes (https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud).
+The satellite imagery [download script](https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud) to fetch Landsat & Sentinel data was developed by Vasco Nunes.
 
-The Random Forest scripts are based on a classification script developed by Chris Holden (http://ceholden.github.io/open-geo-tutorial/python/chapter_5_classification.html).
+The Random Forest scripts are based on a [classification script](http://ceholden.github.io/open-geo-tutorial/python/chapter_5_classification.html) developed by Chris Holden.
 
 Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster.ac.uk).
 
@@ -19,9 +19,9 @@ Any questions or concerns should be addressed to Diarmuid Corr (d.corr@lancaster
     
     To quickly visualise Sentinel-2 and Landsat imagery for a location and date range use the NASA/USGS tool, EarthExplorer:
       
-https://earthexplorer.usgs.gov/
-https://eos.com/products/landviewer/
-https://apps.sentinel-hub.com/sentinel-playground/
+[EarthExplorer](https://earthexplorer.usgs.gov/)
+[EOS Landviewer](https://eos.com/products/landviewer/)
+[Sentinel Playground](https://apps.sentinel-hub.com/sentinel-playground/)
   
     EarthExplorer contains sensor data from many other sources, and is more useful for visualisation rather than downloading due to slow download speeds and difficulty in batch downloading. 
     Note: A free account is needed for this data. 
@@ -32,7 +32,7 @@ https://apps.sentinel-hub.com/sentinel-playground/
   ### ESA Copernicus Open Access Hub:
     To visualise and download Sentinel mission data, use ESA’s Copernicus Open Access Hub:
     
-https://scihub.copernicus.eu/dhus/#/home 
+[Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/home )
     
     This is the source for Sentinel-1,2,3 data. However, ESA removes the data when over one year old. This is frustrating if you wish to visualise/download older data.
     
@@ -42,7 +42,7 @@ https://scihub.copernicus.eu/dhus/#/home
 
     To visualise and adapt satellite data online, use Google Earth Engine:
 
-https://earthengine.google.com/
+[Google Earth Engine](https://earthengine.google.com/)
     
     Google Earth Engine combines a multi-petabyte catalogue of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. Scientists, researchers, and developers use Earth Engine to detect changes, map trends, and quantify differences on the Earth's surface. Earth Engine is now available for commercial use, and remains free for academic and research use.
     
@@ -51,15 +51,15 @@ https://earthengine.google.com/
   ### Google Cloud Storage buckets:
     To download data without visualisation, use public Google Cloud Storage buckets:
 
-https://console.cloud.google.com/storage/browser/gcp-public-data-landsat - Landsat level 1 collection only.
-https://cloud.google.com/storage/docs/public-datasets/landsat - documentation.
-
-https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/tiles/ - the Sentinel-2 level 1 and 2 collections only.
-https://cloud.google.com/storage/docs/public-datasets/sentinel-2 - documentation.
+  https://console.cloud.google.com/storage/browser/gcp-public-data-landsat - Landsat level 1 collection only.
+  [Landsat data | Cloud Storage](https://cloud.google.com/storage/docs/public-datasets/landsat) - documentation.
+  
+  https://console.cloud.google.com/storage/browser/gcp-public-data-sentinel-2/tiles/ - the Sentinel-2 level 1 and 2 collections only.
+  [Sentinel-2 data | Cloud Storage](https://cloud.google.com/storage/docs/public-datasets/sentinel-2) - documentation.
       
   The data may be downloaded directly from these storage buckets, although this may prove inefficient. To batch download data, make use of the satellite imagery download script to fetch Landsat & Sentinel data, developed by Vasco Nunes:
   
-https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
+    https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
 
   A sample script using this package is available in the script named:
     
@@ -72,7 +72,7 @@ https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud
   Note: All files will be downloaded to the chosen output directory. A tile catalogue is downloaded, this can exceed 5-10 GB. 
   Note: For information on variables and arguments see the documentation here:
 
-https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud/blob/master/README.md
+    https://github.com/vascobnunes/fetchLandsatSentinelFromGoogleCloud/blob/master/README.md
 
 ## 2 - Create RGB/True Colour imagery from satellite imagery:
 
@@ -84,8 +84,53 @@ Optical satellite sensors typically contain multispectral data with bands in the
   
   Note: The following packages are required on a python environment before this script can be executed: rasterio, glob, os, matplotlib, numpy, math, shutil, multiprocessing.
 
+## 3 - Train machine learning (random forest) algorithm:
 
+Random Forest is a supervised classification approach which incorporates pixel-based (rather than object-based) training data. Specifically, we use the [Random Forest (Brieman 2001)](http://link.springer.com/article/10.1023/A:1010933404324) ensemble decision tree algorithm by [Leo Breiman and Adele Cutler](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm). The Random Forest algorithm has become extremely popular in the field of remote sensing, as it is computationally inexpensive, flexible and resistant to overfitting.
+To learn more about Random Forest see:
 
+    [Breiman, Leo. 2001. Random Forests. Machine Learning 45-1: 5-32](http://link.springer.com/article/10.1023/A:1010933404324)
+    [Wikipedia - Random Forest](http://en.wikipedia.org/wiki/Random_forest)
+    [Breiman and Cutler's website](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#workings)
 
+Random Forest algorithms take the ensemble result of a large number of decision trees (a forest of them). The random part of the name comes from the term bootstrap aggregating, or bagging, meaning that each tree within the forest is trained only on some subset of the full training dataset (the subset is determined by sampling with replacement). The elements of the training data for each tree that are left unseen are held out-of-bag for estimation of the accuracy. Randomness helps decide which feature input variables are seen at each node for each decision tree. Once all individual trees are fit to the random subset of the training data, using a random set of feature variables at each node, the ensemble of them all is used to give the final prediction.
 
-    
+Finally, Random Forest has some other benefits:
+
+    It gives a measure of variable importance which relates how useful your input features (e.g. spectral bands) are in the classification.
+    The out-of-bag samples in each tree can be used to validate each tree. Grouping these predicted accuracies across all trees can sometimes give you an unbiased estimate of the error rate, similar to doing cross-validation.
+    Can be used for regressions, unsupervised clustering, or supervised classification.
+    Available in many popular languages, including Python, R, and MATLAB.
+    Free, open source, and efficient.
+
+Training a Random Forest algorithm requires training data representing all features the algorithm may encounter. This training data should be complemented by representative labels, in this algorithm a binary: water - not-water labels (or 0s and 1s). 
+These scripts compare inputs of the multiple hyperparameters used to train a Random Forest algorithm: Total number of decision trees within the forest (n_estimators); the function applied to determine the maximum number of features (max_features); the maximum depth any given tree may reach before making a decision (max_dapth); the minimum number of samples before a split in any given tree (min_samples_split); and the minimum number of samples before a leaf in any given tree (min_samples_leaf). Two plots are recorded for each variation. The first: AUC Score (Area Under Curve) versus the varied hyperparameter (for both Training and Validation datasets). The second: prediction time (s)  versus the varied hyperparameter (for Validation dataset). 
+Using the information obtained from these graphs, the script then performs a cross validation approach to choose the most appropriate values to train the final algorithm. The final algorithm is trained and fitted to the training data before saving.
+
+There are scripts for each of the sensors (S2 and L8) in the following files:
+
+    S2_RF_Train.py
+    L8_RF_Train.py
+
+Note: Both scripts require predefined training data and labels for these in a numpy array. They save the algorithm as a .joblib file.
+Note: The following packages are required on a python environment before these scripts can be executed: rasterio, scikit-learn, gdal, numpy, matplotlib, datetime, time, joblib.Some of these packages will exist depending on your Python/conda install.
+
+## 4 - Test/validate machine learning (random forest) algorithm:
+
+Validation of the methods is carried out when choosing the hyperparameters in the training of the algorithm, however, we also test the methods on unseen datasets to ensure the methods are trained thoroughly and neither over- or under- fitting. This step requires datasets similar to last: data representing all features the algorithm may encounter with corresponding labels. The fitted algorithm from the step before should also be saved and used in this step. 
+
+The scripts load in the test datasets and fitted Random Forest algorithm. The algorithm is used to classify the test data and outputs are compared to the labelled data. The accuracy assessment contains a confusion matrix, from which precision, recall, F1 Score and overall accuracy are computed (Equations 1a-1d). Precision is the number of true positive results divided by the number of all positive results, including those not identified correctly. Recall is the number of true positive results divided by the number of all samples that should have been identified as positive. F1 Score is an overall assessment of the model’s accuracy, it is the harmonic mean of the precision and recall. Accuracy is the proportion of correct predictions made from the full dataset.
+
+    Precision = TPTP + FP    (1a) 
+    Recall = TPTP + FN    (1b)
+    F1 Score = 2  Precision  Recall  Precision + Recall = 2  TP2  TP + FP + FN    (1c)
+    Accuracy = All TrueAll Values = TP + TNTP + FP + TN + FN    (1d)
+
+There are scripts for each of the sensors (S2 and L8) in the following files:
+
+    S2_RF_Accuracy.py 
+    L8_RF_Accuracy.py 
+
+Note: Both scripts require predefined testing data and labels for these in a numpy array as well as a saved algorithm as a .joblib file.
+Note: The following packages are required on a python environment before these scripts can be executed: numpy, matplotlib, pandas, seaborn, scikit-learn, datetime, joblib. Some of these packages will exist depending on your Python/conda install.
+
