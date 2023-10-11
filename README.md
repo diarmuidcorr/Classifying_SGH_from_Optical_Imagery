@@ -130,7 +130,31 @@ There are scripts for each of the sensors (S2 and L8) in the following files:
 
     S2_RF_Accuracy.py 
     L8_RF_Accuracy.py 
-
+    
 Note: Both scripts require predefined testing data and labels for these in a numpy array as well as a saved algorithm as a .joblib file.
 Note: The following packages are required on a python environment before these scripts can be executed: numpy, matplotlib, pandas, seaborn, scikit-learn, datetime, joblib. Some of these packages will exist depending on your Python/conda install.
+
+## 5 - Calculate the depth of supraglacial hydrological features:
+
+The depth of supraglacial hydrological features are caclculated using a radiative transfer equation and the red band in Landsat-8 and Sentinel-2 optical imagery. 
+
+**Radiative Transfer Equation for the Depth of Supraglacial Water**
+
+$$Z = ln (Ad − R∞) − ln (Rw − R∞) / -g$$
+
+Where:
+Z is the depth in metres.160
+Ad is the reflectance of the ice uderlying the supraglacial water (bottom albedo).
+R∞ is the reflectance of optically deep water.
+Rw is the reflectance of the SGH pixel of interest.
+g is the coefficient for loss of spectral radiance in the water column. 
+g ≈ 2Kd (Kd is the diffuse attenuation coefficient of downward light, (Maritorena et al., 1994)).
+
+These scripts find and download corresponding Red L8 and S2 tiles from Google Cloud Storage and calculate the depth of each pixel identified as water by RF methods. There are scripts for each of the sensors (S2 and L8) in the following files:
+
+    S2_Depth_Retrieval.py 
+    L8_Depth_Retrieval.py 
+
+
+
 
