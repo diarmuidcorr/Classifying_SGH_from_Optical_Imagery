@@ -140,7 +140,7 @@ The depth of supraglacial hydrological features are caclculated using a radiativ
 
 **Radiative Transfer Equation for the Depth of Supraglacial Water**
 
-$$Z = ln (Ad − R∞) − ln (Rw − R∞) / -g$$
+$$Z = {ln (Ad − R∞) − ln (Rw − R∞) \over -g}$$
 
 Where:
 Z is the depth in metres.160
