@@ -13,6 +13,9 @@ authors:
     email: dcorr103@gmail.com
     affiliation: Lancaster University
     orcid: 'https://orcid.org/0000-0002-7026-2052'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.8434645
 repository-code: >-
   https://github.com/diarmuidcorr/Classifying_SGH_from_Optical_Imagery
 abstract: >-
